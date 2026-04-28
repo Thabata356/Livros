@@ -11,64 +11,66 @@
   <script src="./js/sessao.js"></script>
 
   <link rel="stylesheet" href="./css/cadastro.css" />
-  <link rel="icon" href="./assets/imgs/logo.png" />
+  <link rel="icon" href="./assets/imgs/livro.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
-<div class="login">
-  <div class="alerta_erro">
-    <div class="card_erro" id="cardErro">
-      <span id="mensagem_erro"></span>
+<body>
+
+  <div class="login">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
     </div>
-  </div>
 
-  <div class="frase">
-    <p>Os livros não matam a fome, não suprimem a miséria, <br>
-      não acabam com as desigualdades e com as injustiças do mundo, <br>
-      mas consolam as almas, e fazem-nas sonhar.</p>
+    <div class="frase">
+      <p>Os livros não matam a fome, não suprimem a miséria, <br>
+        não acabam com as desigualdades e com as injustiças do mundo, <br>
+        mas consolam as almas, e fazem-nas sonhar.</p>
 
-    <div class="autor">
-      <p>- Olavo Bilac Dimas</p>
+      <div class="autor">
+        <p>- Olavo Bilac Dimas</p>
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="card card-cadastro">
-      <h2>Bem-vindo de volta!</h2>
-      <div class="formulario">
-        <!--
+    <div class="container">
+      <div class="card card-cadastro">
+        <h2>Bem-vindo de volta!</h2>
+        <div class="formulario">
+          <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
 
-        <div class="campo">
-          <span>Nome:</span>
-          <input id="ipt_nome" type="text" placeholder="Seu nome completo" />
-        </div>
-        <div class="campo">
-          <span>E-mail:</span>
-          <input id="ipt_email" type="text" placeholder="meuemail@.com" />
-        </div>
-        <div class="campo">
-          <span>Senha:</span>
-          <input id="ipt_senha" type="password" placeholder="******" />
-        </div>
-        <div class="campo">
-          <span>Confirmação da Senha:</span>
-          <input id="ipt_confirmacao_senha" type="password" placeholder="******" />
-        </div>
-        <button class="botao botao-cadastro" onclick="cadastrar()">Cadastrar</button>
+          <div class="campo">
+            <span>Nome:</span>
+            <input id="ipt_nome" type="text" placeholder="Seu nome completo" />
+          </div>
+          <div class="campo">
+            <span>E-mail:</span>
+            <input id="ipt_email" type="text" placeholder="meuemail@.com" />
+          </div>
+          <div class="campo">
+            <span>Senha:</span>
+            <input id="ipt_senha" type="password" placeholder="******" />
+          </div>
+          <div class="campo">
+            <span>Confirmação da Senha:</span>
+            <input id="ipt_confirmacao_senha" type="password" placeholder="******" />
+          </div>
+          <button class="botao botao-cadastro" onclick="cadastrar()">Cadastrar</button>
 
-        <a href="login.html" class="botao">Login</a>
-      </div>
-      <div id="div_aguardar" class="loading-div">
-        <img src="./assets/circle-loading.gif" id="loading-gif" />
-      </div>
+          <a href="login.html" class="botao">Login</a>
+        </div>
+        <div id="div_aguardar" class="loading-div">
+          <img src="./assets/circle-loading.gif" id="loading-gif" />
+        </div>
 
-      <div id="div_erros_login"></div>
+        <div id="div_erros_login"></div>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 

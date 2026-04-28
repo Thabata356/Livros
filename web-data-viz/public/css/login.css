@@ -7,102 +7,96 @@
 }
 
 body {
-    margin: 0;
     background-color: #c8d9e6;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
 }
 
 .login {
     display: flex;
-    align-items: center;
     min-height: 100vh;
-}
-
-.frase,
-.container {
-    flex: 1 1 50%;
-    width: 50%;
+    width: 100%;
 }
 
 .frase {
-    padding: 0 3rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
+    min-width: 0;
 }
 
 .frase p {
     color: #003366;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: bold;
     line-height: 1.5;
     font-style: italic;
-    margin: 0;
 }
 
 .frase .autor p {
     margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    font-style: normal;
-    opacity: 0.8;
+    font-size: 0.9rem;
     text-align: right;
+    opacity: 0.8;
 }
 
 .container {
+    flex: 1;
+    background-color: white;
     display: flex;
-    justify-content: flex-end;
-    height: 38.7rem;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
 }
 
-.card-login {
+.card-login{
+    height: 33rem;
     width: 100%;
-    max-width: 40rem;
-    padding: 1.25rem;
-    background-color: white;
-    align-items: center;
+    max-width: 28.125rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-login h2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.7rem;
     color: #003366;
-    font-size: 2.1rem;
+    font-size: 2rem;
     text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
 }
 
 .formulario {
-    margin-top: 6.3rem;
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .campo {
-    margin-bottom: 0.625rem;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
 }
 
 .campo span {
     color: #003366;
-    outline: 0;
-    margin-bottom: 5px;
-    margin-left: 4.3rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.3125rem;
 }
 
 .campo input {
-    width: 27rem;
-    max-width: 27rem;
+    width: 100%;
     border: none;
     border-bottom: 0.125rem solid #9b9b9b;
-    outline: 0;
+    padding: 0.5rem 0;
     font-size: 1rem;
-    color: #000;
-    padding: 0.438rem 0;
-    background: transparent;
-    transition: border-color 0.2s;
-    font-family: "Montserrat";
-    align-self: center;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
 }
 
 .campo input:focus {
@@ -110,39 +104,99 @@ body {
 }
 
 .botao {
-    margin-left: 5.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 27rem;
-    height: 2.5rem;
-    border-radius: 1rem;
+    width: 100%;
+    height: 2.8125rem;
+    border-radius: 1.5625rem;
     border: none;
     background-color: #003366;
     color: white;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-family: "Montserrat";
-    font-size: 0.9rem;
-    font-weight: 500;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    margin-top: 0.3125rem;
+}
+
+.botao:hover {
+    background-color: #002244;
+    transform: scale(1.02);
 }
 
 .botao-login {
-    margin-bottom: 0.7rem;
-}
-
-.card_erro {
-    display: none;
-    color: red;
-    margin-bottom: 0.625rem;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 3rem;
 }
 
 .loading-div {
-    display: none; 
+    display: none;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .loading-div img {
-    width: 50px;
+    width: 3.125rem;
+}
+
+/* ==============================@MEDIAS============================================ */
+
+@media (max-width: 64rem) {
+    .login {
+        flex-direction: column;
+    }
+
+    .card-login h2 {
+        font-size: 1.5rem;
+    }
+
+    .formulario {
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    .botao {
+        width: 100%;
+        height: 2.4rem;
+        font-size: 0.9rem;
+    }
+
+    .frase {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .frase .autor p {
+        text-align: center;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 26.25rem) {
+    .card-login {
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .card-login h2 {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 23.5rem) {
+    .card-login {
+        width: 100%;
+    }
+
+    .botao {
+        margin-right: 0;
+        width: 100%;
+    }
 }
