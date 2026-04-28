@@ -51,7 +51,7 @@ body {
 .container {
     display: flex;
     justify-content: flex-end;
-    height: 37.43rem;
+    height: 38.7rem;
 }
 
 .card-cadastro {
@@ -134,6 +134,12 @@ body {
     text-align: center;
 }
 
-.div_aguardar{
-    display: none;
+.loading-div {
+    display: none; 
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.loading-div img {
+    width: 50px;
 }
