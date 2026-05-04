@@ -1,12 +1,99 @@
-/* pagina mural */
+/* pagina mural / graficos */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fundo levemente cinza/azulado para destacar os cartões brancos/azuis */
+    background-color: #f4f7f9; 
+    font-family: "Montserrat", sans-serif;
+    color: #333;
 }
+
+.janela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.box-agrupamento {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    gap: 30px; /* Aumentei o respiro entre os cards */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.grupo-kpis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 140px;
+    border-radius: 20px; 
+    background: #c8d9e6;
+    box-shadow: 0 10px 30px -5px rgba(0, 51, 102, 0.15);
+    border: 1px solid rgba(0, 51, 102, 0.15);
+    transition: all 0.3s ease; 
+}
+
+.grupo-kpis:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px -5px rgba(0, 51, 102, 0.25);
+}
+
+.kpi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 0 30px;
+}
+
+.kpi h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #5a7b9c; /* Um azul médio para não roubar a atenção do valor principal */
+}
+
+.kpi h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #003366; /* Seu azul escuro original para dar contraste com o fundo claro */
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .label-captura {
   display: flex;
@@ -95,7 +182,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  /* background-color: #212124; */
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -111,16 +198,22 @@ body {
 
 /* pagina graficos */
 
+.kpi1 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  z-index: 2;
+}
+
 .dash-header {
-  background-color: #212124;
+  background-color: white;
 }
 
 .dash {
-  width: 80%;
-  position: relative;
+  width: 100%;
+  position: fixed;
   top: 0;
-  left: 20%;
-  background-color: #161618;
+  /* left: 20%; */
   height: 100vh;
   overflow: auto;
 }
@@ -132,11 +225,11 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: white;
 }
 
 .area-parametros-alerta .titulo-legenda {
-  color: white;
+  color: black;
   font-weight: 600;
   width: fit-content;
   margin: 10px 20px;
@@ -327,12 +420,12 @@ canvas {
 
 /* PAGINA DOS GRÁFICOS 2023 */
 
-.janela {
+/* .janela {
   display: flex;
-  /* width: 100vw; */
-}
+  width: 100vw;
+} */
 
-.header-left a {
+/* .header-left a {
   text-decoration: none;
   color: white;
 }
@@ -349,14 +442,14 @@ canvas {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #32b9cd;
-  background-color: #212124;
-}
+  background-color: white;
+} */
 
 .dash-right {
   display: flex;
-  width: 70%;
+  width: 100%;
   height: fit-content;
-  background-color: #161618;
+  /* background-color: white; */
   position: relative;
   top: 0;
   left: 25%;
@@ -364,7 +457,7 @@ canvas {
   overflow: auto;
 }
 
-.header-left h1 {
+/* .header-left h1 {
   color: #32b9cd;
 }
 
@@ -425,4 +518,4 @@ canvas {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
-}
+} */
