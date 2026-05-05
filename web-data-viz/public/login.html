@@ -109,10 +109,14 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id_usuario;
-                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    // colocar o Storage de Livros;
+                    sessionStorage.LIVROS = JSON.stringify(json.livros)
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        // window.location = "./dashboard/card.html";
+
+                        //Mudar a localização de card para dashboard;
+                        window.location = "./dashboard/dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

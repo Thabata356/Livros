@@ -6,8 +6,7 @@ create table usuario(
 	id_usuario int primary key auto_increment,
     nome varchar(100),
     email varchar(100),
-    senha varchar(45),
-    meta_livros int
+    senha varchar(45)
 );
 
 create table livro(
