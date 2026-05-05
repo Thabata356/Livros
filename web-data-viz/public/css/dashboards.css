@@ -212,6 +212,7 @@ body {
 .dash {
   width: 100%;
   position: fixed;
+  margin-top: 10%;
   top: 0;
   /* left: 20%; */
   height: 100vh;

@@ -183,6 +183,7 @@
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
+                console.log("Status do erro:", response.status);
             }
         })
             .catch(function (error) {
@@ -214,7 +215,7 @@
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.qtd_paginas);
+            dados.datasets[0].data.push(registro.paginas);
         }
 
         console.log('----------------------------------------------')
