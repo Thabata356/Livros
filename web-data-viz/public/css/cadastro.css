@@ -73,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 1.6rem;
 }
 
 .campo {
@@ -103,32 +104,51 @@ body {
     border-bottom-color: #003366;
 }
 
-.botao {
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
-    height: 2.8125rem;
-    border-radius: 1.5625rem;
-    border: none;
+    height: auto;
     background-color: #003366;
+    border-radius: 1.8rem;
+    margin-top: 2rem;
+}
+
+.botoes p{
     color: white;
-    font-size: 1rem;
+    align-self: center;
+}
+
+.botao {
+    padding: 1rem 4.3rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    display: flex;
-    align-items: center;
     justify-content: center;
     transition: 0.3s;
-    margin-top: 0.3125rem;
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    background: none;
+    border: none;
+    outline: none;
+    align-self: center;
 }
 
 .botao:hover {
-    background-color: #002244;
     transform: scale(1.02);
 }
 
 .botao-cadastro {
     font-family: "Montserrat", sans-serif;
-    margin-top: 0.625rem;
 }
 
 .loading-div {
@@ -157,12 +177,6 @@ body {
         gap: 1.2rem;
     }
 
-    .botao {
-        width: 100%;
-        height: 2.4rem;
-        font-size: 0.9rem;
-    }
-
     .frase {
         padding: 3rem 1.5rem;
         text-align: center;
@@ -175,9 +189,20 @@ body {
     .container {
         padding: 2rem 1rem;
     }
+
+    .botoes {
+        height: 3rem;
+        padding: 0.5rem;
+        align-items: center;
+    }
+
+    .botao {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
 }
 
-@media (max-width: 26.25rem) {
+@media (max-width: 27rem) {
     .card-cadastro {
         height: auto;
         padding: 1.5rem;
@@ -188,6 +213,14 @@ body {
         margin-left: 0;
         text-align: center;
     }
+
+    .botoes {
+        height: 2.5rem;
+        flex-direction: row; 
+        border-radius: 2.3rem;
+        gap: 0.2rem;
+        align-items: center;
+    }
 }
 
 @media (max-width: 23.5rem) {
@@ -196,7 +229,12 @@ body {
     }
 
     .botao {
-        margin-right: 0;
         width: 100%;
+        padding: 0.7rem;
+        margin-right: 0;
+    }
+
+    .botao-cadastro {
+        margin-right: 0;
     }
 }
