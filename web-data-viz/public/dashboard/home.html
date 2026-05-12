@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
@@ -10,10 +11,31 @@
 <body>
 
     <nav>
-        <div class="icon"></div>
-        <div class="icon ativo"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
+        <div class="icon ativo">
+            <a href="../dashboard/home.html">
+                <img src="../assets/imgs/home.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/dashboard.html">
+                <img src="../assets/imgs/grafico.png" alt="Grafico">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/dashboard.html">
+                <!-- Criar um livro -->
+                <img src="../assets/imgs/livro-fechado.png" alt="Livros">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/dashboard.html">
+                <!-- Criar e editar uma da postagem -->
+                <img src="../assets/imgs/lapis.png" alt="Mural">
+            </a>
+        </div>
     </nav>
 
     <main>
@@ -24,12 +46,13 @@
             <div class="livros-box">
                 <div class="capa"></div>
                 <div class="capa-escrita">
-                    <h2>The Cambers of Secrets</h2>
+                    <h2>O Jardim Secreto</h2>
                     <p>154 / 300 páginas</p>
                     <button>Ver Post</button>
                 </div>
             </div>
 
+            <h2 class="livros-grid-titulo">Popular agora</h2>
             <div class="livros-grid">
                 <div class="livro"></div>
                 <div class="livro"></div>
@@ -37,11 +60,51 @@
                 <div class="livro"></div>
             </div>
         </section>
-        
-        <aside>
-          
+
+        <aside class="painel">
+            <h3>Postagens da semana</h3>
+            <div class="numeros">
+                <div class="dia">
+                    <span class="dia-texto">Seg</span>
+                    <span>11</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Ter</span>
+                    <span class="hoje">12</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Qua</span>
+                    <span>13</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Qui</span>
+                    <span>14</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Sex</span>
+                    <span>15</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Sáb</span>
+                    <span>16</span>
+                </div>
+                <div class="dia">
+                    <span class="dia-texto">Dom</span>
+                    <span>17</span>
+                </div>
+            </div>
+            <br>
+            <h3>Comentarios</h3>
+            <div class="pessoa">
+                <div class="avatar"></div>
+                <p><b>Roberto Jordan</b><br><span>Muito bom!</span></p>
+            </div>
+            <div class="pessoa">
+                <div class="avatar"></div>
+                <p><b>Anna Henry</b><br><span>Destetei esse capítulo</span></p>
+            </div>
         </aside>
     </main>
-
 </body>
+
 </html>
