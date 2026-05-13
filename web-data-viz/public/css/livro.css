@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f5f3ef;
+    display: flex; 
+    flex-direction: row; 
+    min-height: 100vh;
+}
+
+nav {
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-top: 1.2rem;
+    gap: 1.7rem;
+    border: solid 0.05rem #c8d9e6;
+    position: sticky; 
+    top: 0;
+}
+
+
+.icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: #c8d9e6;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img{
+    width: 2rem;
+}
+
+.ativo {
+    background-color: #003366;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.cadastrar-livro {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #c8d9e6; 
+    color: #003366;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; 
+}
+
+.capa {
+    width: 9rem;
+    height: 11rem;
+    background-color: #c8d9e6;
+    border-radius: 0.5rem;
+    margin-bottom: 20px;
+    align-self: center; 
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.625rem;
+    border: 1px solid #c8d9e6;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+input::placeholder {
+    color: #888;
+    font-style: italic;
+    opacity: 1;
+    font-size: 0.85rem;
+}
+
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    flex: 1; 
+    min-width: 120px;
+    padding: 0.625rem;
+    border-radius: 3rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0055aa;
+}

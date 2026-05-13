@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Livro</title>
+    <link rel="stylesheet" href="../css/livro.css">
+</head>
+
+<body>
+    <nav>
+        <div class="icon">
+            <a href="../dashboard/home.html">
+                <img src="../assets/imgs/home-preto.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/dashboard.html">
+                <img src="../assets/imgs/grafico-preto.png" alt="Grafico">
+            </a>
+        </div>
+
+        <div class="icon ativo">
+            <a href="../dashboard/livro.html">
+                <img src="../assets/imgs/livro-fechado.png" alt="Livros">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/mural.html">
+                <!-- Criar e editar uma da postagem -->
+                <img src="../assets/imgs/lapis-preto.png" alt="Mural">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <input type="text" placeholder="Pesquisar livro, autor, edição...">
+        <h1>Cadastre um Livro.</h1>
+
+        <div class="cadastrar-livro">
+            <div class="capa"></div>
+
+            <span>Nome do Livro: </span>
+            <br>
+            <input type="text" id="ipt_nomeLivro" placeholder="Narnia">
+
+            <span>Quantidade de Paginas: </span>
+            <br>
+            <input type="text" id="ipt_quantidadePaginas">
+
+            <span>Paginas Lidas: </span>
+            <br>
+            <input type="text" id="ipt_paginasLidas">
+
+            <div class="botoes">
+                <button onclick="cadastrarLivro()">Cadastrar</button>
+                <button onclick="atualizarLivro()">Atualizar</button>
+                <button onclick="listarLivro()">Listar</button>
+                <button onclick="deletarLivro()">Deletar</button>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

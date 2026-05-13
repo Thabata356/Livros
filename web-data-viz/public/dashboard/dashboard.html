@@ -29,55 +29,84 @@
 <!-- <body onload=" atualizarFeed()"> -->
 
 <body>
-
-    <div class="janela">
-        
-        
-        <!-- ÁREA DOS KPIS -->
-        <div class="box-agrupamento Kpis">
-
-            <div class="grupo-kpis">
-                <div class="kpi" id="kpi1">
-                    <h4>Páginas Lidas</h4>
-                    <h3>1207</h3>
-                </div>
-            </div>
-
-            <div class="grupo-kpis">
-                <div class="kpi" id="kpi2">
-                    <h4>Livros Concluídos</h4>
-                    <h3>5 de 12</h3>
-                </div>
-            </div>
-
-            <div class="grupo-kpis">
-                <div class="kpi" id="kpi3">
-                    <h4>Meta do Ano</h4>
-                    <h3>12</h3>
-                </div>
-            </div>
-
+    <nav>
+        <div class="icon">
+            <a href="../dashboard/home.html">
+                <img src="../assets/imgs/home-preto.png" alt="Home">
+            </a>
         </div>
 
+        <div class="icon ativo">
+            <a href="../dashboard/dashboard.html">
+                <img src="../assets/imgs/grafico.png" alt="Grafico">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/livro.html">
+                <img src="../assets/imgs/livro-fechado-preto.png" alt="Livros">
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="../dashboard/mural.html">
+                <!-- Criar e editar uma da postagem -->
+                <img src="../assets/imgs/lapis-preto.png" alt="Mural">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="janela">
 
 
-        <div class="dash">
-            <div id="alerta">
+            <!-- ÁREA DOS KPIS -->
+            <div class="box-agrupamento Kpis">
+
+                <div class="grupo-kpis">
+                    <div class="kpi" id="kpi1">
+                        <h4>Páginas Lidas</h4>
+                        <h3>1207</h3>
+                    </div>
+                </div>
+
+                <div class="grupo-kpis">
+                    <div class="kpi" id="kpi2">
+                        <h4>Livros Concluídos</h4>
+                        <h3>5 de 12</h3>
+                    </div>
+                </div>
+
+                <div class="grupo-kpis">
+                    <div class="kpi" id="kpi3">
+                        <h4>Meta do Ano</h4>
+                        <h3>12</h3>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- <div class="btns-dash">
+
+
+            <div class="dash">
+                <div id="alerta">
+                </div>
+
+                <!-- <div class="btns-dash">
                 <select id="selLivros">
                     <option value="">Selecione um livro</option>
                 </select>
             </div> -->
 
-            <div class="btns-dash" id="btnLivros">
-                <!-- O gráfico é chamado de acordo com o id_livro (fk_aquario) do banco  -->
-            </div>
-            <div id="graficos">
+                <div class="btns-dash" id="btnLivros">
+                    <!-- O gráfico é chamado de acordo com o id_livro (fk_aquario) do banco  -->
+                </div>
+                <div id="graficos">
+                </div>
             </div>
         </div>
-    </div>
+
+    </main>
 
 
 </body>
@@ -236,29 +265,29 @@
         // dados.datasets[1].data.push(registro.temperatura);
         // }
 
-    console.log('----------------------------------------------')
-    console.log('O gráfico será plotado com os respectivos valores:')
-    console.log('Labels:')
-    console.log(labels)
-    console.log('Dados:')
-    console.log(dados.datasets)
-    console.log('----------------------------------------------')
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
 
-    // Criando estrutura para plotar gráfico - config
-    const config = {
-        type: 'line',
-        data: dados,
-    };
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'line',
+            data: dados,
+        };
 
-    // Adicionando gráfico criado em div na tela
-    let myChart = new Chart(
-        document.getElementById(`myChartCanvas${id_livro}`),
-        config
-    );
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChartCanvas${id_livro}`),
+            config
+        );
 
-    setTimeout(() => atualizarGrafico(id_livro, dados, myChart), 2000);
+        setTimeout(() => atualizarGrafico(id_livro, dados, myChart), 2000);
 
-}
+    }
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
     // buscando a última medid_livroa inserid_livroa em tabela contendo as capturas, 
